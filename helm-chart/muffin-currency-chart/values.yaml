@@ -23,15 +23,15 @@ service:
 
 # This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
 livenessProbe:
+  enabled: true
   httpGet:
     path: /rate?from=PLAIN&to=CHOKOLATE
-    port: 8080
   initialDelaySeconds: 5
   periodSeconds: 10
 readinessProbe:
+  enabled: true
   httpGet:
     path: /rate?from=PLAIN&to=CHOKOLATE
-    port: 8080
   initialDelaySeconds: 2
   periodSeconds: 5
 
