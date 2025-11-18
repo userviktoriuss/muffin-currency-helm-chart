@@ -3,12 +3,12 @@ releases:
     namespace: default
     chart: ./muffin-currency-chart
     values:
-      - muffin-currency/values.yaml
+      - muffin-currency-chart/values.yaml
 
   - name: muffin-wallet
     namespace: default
     chart: ./muffin-wallet-chart
     values:
-      - muffin-wallet/values.yaml
+      - muffin-wallet-chart/values.yaml
     needs:
       - default/muffin-currency
